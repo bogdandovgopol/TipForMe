@@ -39,7 +39,7 @@ class TipCalculatorVC: UIViewController {
     
     func updateUI() {
         let totalAfterTip = Double(tipCalculator.totalAmount)
-        let numberOfPeople = Double(tipSplitSlider.value)
+        let numberOfPeople = Double(Int(tipSplitSlider.value))
         totalAmount.text = convertToCurrency(amount: totalAfterTip as NSNumber)
         eachPersonAmount.text = convertToCurrency(amount: (totalAfterTip / numberOfPeople) as NSNumber)
     }
