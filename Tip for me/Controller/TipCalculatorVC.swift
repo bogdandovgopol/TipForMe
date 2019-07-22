@@ -18,17 +18,22 @@ class TipCalculatorVC: UIViewController {
     @IBOutlet weak var eachPersonAmount: UITextField!
     var tipCalculator  = TipCalculator(billAmount: 0, tipPercentage: 10)
     
+    //change statusbar color
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         totalBeforeTipTxt.attributedPlaceholder = NSAttributedString(string: "0", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        
         //check if billAmount changed
         totalBeforeTipTxt.addTarget(self, action: #selector(self.billAmountChanged(_:)), for: UIControl.Event.editingChanged)
-        
+        //open keyboard
         totalBeforeTipTxt.becomeFirstResponder()
 
     }
+    
     
     func calculateTip() {
         tipCalculator.tipPercentage = Int(tipPercentageSlider.value)
