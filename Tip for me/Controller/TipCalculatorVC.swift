@@ -26,7 +26,7 @@ class TipCalculatorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        totalBeforeTipTxt.attributedPlaceholder = NSAttributedString(string: "0", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        totalBeforeTipTxt.attributedPlaceholder = NSAttributedString(string: "$0", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         //check if billAmount changed
         totalBeforeTipTxt.addTarget(self, action: #selector(self.billAmountChanged(_:)), for: UIControl.Event.editingChanged)
         //open keyboard
