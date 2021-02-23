@@ -8,9 +8,3 @@ AppStore: https://apps.apple.com/us/app/tip-for-me-calculator/id1504246471
 
 * Write simple math operations with swift
 * Practice using IBActions and IBOutlets
-
-## Contact Info:
-- Email: bogdan@dovgopol.dev
-- Web: [dovgopol.dev](https://dovgopol.dev)
-
-# Thanks for stopping by!
